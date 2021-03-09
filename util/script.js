@@ -1,9 +1,5 @@
 'use strict';
 
-/*
-  Write here your JavaScript for HackYourRepo!
-*/
-
 // global variable to be use in all the functoins in js files
 let resultArray = [];
 let contributorsArray = [];
@@ -61,10 +57,10 @@ async function excuteAll() {
 
   //  populate the select:
   const repos = await populateOptions(
-    'https://api.github.com/orgs/HackYourFuture/repos?per_page=100',
+    'https://api.github.com/orgs/HackYourFuture/repos?per_page=100'
   );
   // push the fetch data array to the global array (resultArray)
-  repos.forEach(element => resultArray.push(element));
+  repos.forEach((element) => resultArray.push(element));
   // sort the array elements alphabitcaly
   resultArray.sort((a, b) => a.name.localeCompare(b.name));
   // add the elements as options to the select element
